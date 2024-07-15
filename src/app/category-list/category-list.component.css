@@ -1,0 +1,91 @@
+.container {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.topic {
+  font-size: 20px;
+  color: #79c5e2;
+}
+
+.p-input-icon-right {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;  
+  max-width: 300px;  
+}
+
+.search-bar {
+  padding: 8px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;  
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;  
+}
+
+.card {
+  flex: 1 0 calc(20% - 20px);
+  max-width: calc(20% - 20px);
+  margin-bottom: 20px;
+}
+
+.card p-card {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card .card-description {
+  font-size: 14px;
+  color: #666;
+  max-height: 80px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.small-button {
+  font-size: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+}
+
+:host ::ng-deep .p-card .p-card-content {
+  padding: 0 !important;
+}
+
+:host ::ng-deep .p-card .p-card-title {
+  font-size: initial !important;
+  margin-bottom: initial !important;
+}
+
+:host ::ng-deep .p-button {
+  font-size: 0.700rem;
+}
+:host ::ng-deep .p-card .p-card-footer {
+ padding: 0rem;
+}
+
+ 
+ 
