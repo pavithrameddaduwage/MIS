@@ -21,9 +21,7 @@ import { PaginatorModule } from 'primeng/paginator';
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent {
-  openURL(url: string) {
-    window.open(url, '_blank'); 
-}
+
   cards = [
     { id: 1, title: 'Application 1', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background1.png' },
     { id: 2, title: 'Application 2', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background2.png' },
@@ -33,10 +31,10 @@ export class CategoryListComponent {
     { id: 6, title: 'Application 6', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background2.png' },
     { id: 7, title: 'Application 7', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background3.png' },
     { id: 8, title: 'Application 8', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background4.png' },
-    { id: 9, title: 'Application 8', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background4.png' },
-    { id: 10, title:'Application 8', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background4.png' },
-    
+    { id: 9, title: 'Application 9', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background1.png' },
+    { id: 10, title: 'Application 10', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit!', image: '../assets/background2.png' }
   ];
+
   filteredCards = this.cards;
   searchQuery: string = '';
    
@@ -44,11 +42,15 @@ export class CategoryListComponent {
   rows: number = 5; 
   first: number = 0;  
 
+  constructor() {
+    this.totalRecords = this.cards.length;
+  }
+
   filterCards() {
     this.filteredCards = this.cards.filter(card =>
       card.title.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
-    this.totalRecords = this.filteredCards.length;  
+    this.totalRecords = this.filteredCards.length;
   }
 
   onPageChange(event: any) {
