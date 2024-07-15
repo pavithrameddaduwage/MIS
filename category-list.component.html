@@ -1,0 +1,28 @@
+ 
+<div class="container">
+  <div class="header">
+    <h2 class="topic">Explore Applications</h2>
+    <div class="p-input-icon-right">
+      <input type="text" placeholder="Search" class="search-bar" [(ngModel)]="searchQuery" (input)="filterCards()">
+      <i class="pi pi-search" style="color: var(--primary-color);"></i>
+    </div>
+  </div>
+  <div class="cards-container">
+    <div class="card" *ngFor="let card of filteredCards.slice(first, first + rows)">
+      <p-card [header]="card.title" [style]="{ width: '200px', borderRadius: '10px' }">
+        <ng-template pTemplate="header">
+          <img alt="Card" [src]="card.image" />
+        </ng-template>
+        <p class="card-description">
+          {{ card.description }}
+        </p>
+        <ng-template pTemplate="footer">
+          <div class="flex gap-2 mt-1">
+            <p-button label="Open" class="small-button" (click)="openURL('http://10.15.1.42:3001/login')"></p-button>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+  <p-paginator [rows]="rows" [totalRecords]="totalRecords" (onPageChange)="onPageChange($event)"></p-paginator>
+</div>
