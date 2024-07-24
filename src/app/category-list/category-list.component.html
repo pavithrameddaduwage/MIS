@@ -1,27 +1,59 @@
-<div class="container">
-  <div class="header">
-    <h2 class="topic">Explore Applications</h2>
-    <div class="p-input-icon-right">
-      <input type="text" placeholder="Search" class="search-bar" [(ngModel)]="searchQuery" (input)="filterCards()">
-      <i class="pi pi-search" style="color: var(--primary-color);"></i>
-    </div>
-  </div>
-  <div class="cards-container">
-    <div class="card" *ngFor="let card of filteredCards">
-      <p-card [header]="card.title" [style]="{ width: '200px', borderRadius: '10px' }">
-        <ng-template pTemplate="header">
-          <img alt="Card" [src]="card.image" />
-        </ng-template>
-        <p class="card-description">
-          {{ card.description }}
-        </p>
-        <ng-template pTemplate="footer">
-          <div class="flex gap-2 mt-1">
-            <a href="http://10.15.1.42:3001/login" class="small-button">Open</a>
+<div class="outer">
+  <div class="container">
+    <div class="content">
+      <!-- Business Intelligence Section -->
+      <div class="section">
+        <h2 class="category-topic">Business Intelligence</h2>
+        <p class="category-description">Creating visibility and insights over the Horizon</p>
+        <div class="main-card">
+          <div class="app-grid">
+            <div class="app-card" *ngFor="let app of filteredBusinessIntelligenceApps">
+              <div class="app-icon-container" (mouseenter)="showTooltip($event, app)" (mouseleave)="hideTooltip()" (click)="goToLink(app.url)">
+                <img *ngIf="app.image" [src]="app.image" alt="{{ app.title }} icon" class="app-icon-image">
+                <i *ngIf="!app.image" class="fa {{ app.icon }}"></i>
+                <div class="app-info">
+                  <h3>{{ app.title }}</h3>
+                </div>
+                <div class="tooltip-text">
+                  <div class="tooltip-header">{{ app.title }}</div>
+                  <div class="tooltip-body">
+                    <p>{{ app.description || 'N/A' }}</p>
+                    <p><b>Owner:</b> {{ app.team || 'N/A' }}</p>
+                    <p><b>Department:</b> {{ app.department || 'N/A' }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </ng-template>
-      </p-card>
+        </div>
+      </div>
+
+      <!-- Digital Tools Section -->
+      <div class="section">
+        <h2 class="category-topic">Digital Tools</h2>
+        <p class="category-description">Bringing new technology, automation & standardization to Horizon</p>
+        <div class="main-card">
+          <div class="app-grid">
+            <div class="app-card" *ngFor="let app of filteredDigitalToolsApps">
+              <div class="app-icon-container" (mouseenter)="showTooltip($event, app)" (mouseleave)="hideTooltip()">
+                <img *ngIf="app.image" [src]="app.image" alt="{{ app.title }} icon" class="app-icon-image">
+                <i *ngIf="!app.image" class="fa {{ app.icon }}"></i>
+                <div class="app-info">
+                  <h3>{{ app.title }}</h3>
+                </div>
+                <div class="tooltip-text">
+                  <div class="tooltip-header">{{ app.title }}</div>
+                  <div class="tooltip-body">
+                    <p>{{ app.description || 'N/A' }}</p>
+                    <p><b>Owner:</b> {{ app.team || 'N/A' }}</p>
+                    <p><b>Department:</b> {{ app.department || 'N/A' }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <p-paginator [rows]="rows" [totalRecords]="totalRecords" (onPageChange)="onPageChange($event)"></p-paginator>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
+ 
 import { TabMenuModule } from 'primeng/tabmenu';
 import { MenuItem } from 'primeng/api';
 import { CardModule } from 'primeng/card';
@@ -15,7 +15,6 @@ import { MenubarModule } from 'primeng/menubar';
   standalone: true,
   imports: [
     RouterOutlet,
-    HomeComponent,
     TabMenuModule,
     CardModule,
     ButtonModule,
@@ -42,10 +41,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      { label: 'Home', icon: 'pi pi-home', routerLink: ['/home'] },
-      { label: 'Products', icon: 'pi pi-chart-line',routerLink: ['/category'] },
-      { label: 'About Us', icon: 'pi pi-user' },  
-      { label: 'Our Team', icon: 'pi pi-cog' },
+      { label: 'Home', icon: '', routerLink: ['/home'] },
+      { label: 'Products', icon: '',routerLink: ['/category'] },
+      { label: 'About Us', icon: '' },  
+      { label: 'Our Team', icon: '' },
       // { label: 'Finance', icon: 'pi pi-money-bill' }
     ];
 
