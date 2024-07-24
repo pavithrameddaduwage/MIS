@@ -43,56 +43,11 @@ export class AppComponent implements OnInit {
     this.items = [
       { label: 'Home', icon: '', routerLink: ['/home'] },
       { label: 'Products', icon: '',routerLink: ['/category'] },
-      { label: 'About Us', icon: '' },  
-      { label: 'Our Team', icon: '' },
+      { label: 'About Us', icon: ''},  
+      { label: 'Our Team', icon: ''},
+      // { label: 'Our Team', icon: '',routerLink: ['/team'] },
       // { label: 'Finance', icon: 'pi pi-money-bill' }
     ];
-
-    this.marketingData = [
-      { name: 'Marketing Campaign 1', status: 'In Progress' },
-      { name: 'Marketing Campaign 2', status: 'Completed' },
-      { name: 'Marketing Campaign 3', status: 'On Hold' }
-    ];
-    this.hrData = [
-      { name: 'HR Onboarding Process', status: 'Active' },
-      { name: 'Employee Performance Review', status: 'Upcoming' },
-      { name: 'Benefits Administration', status: 'Ongoing' }
-    ];
-    this.misData = [
-      { name: 'System Implementation', status: 'In Progress' },
-      { name: 'Data Migration', status: 'Completed' },
-      { name: 'IT Support', status: 'Ongoing' }
-    ];
-    this.financeData = [
-      { name: 'Budgeting and Forecasting', status: 'Active' },
-      { name: 'Financial Reporting', status: 'Upcoming' },
-      { name: 'Risk Management', status: 'Ongoing' }
-    ];
-
-    
-    // this.carouselImages = [
-    //   { src: 'assets/carsole1.jpg', alt: 'Image 1' },
-    //   { src: 'https://primefaces.org/cdn/primeng/images/card-ng.jpg', alt: 'Image 2' },
-    //   { src: 'https://primefaces.org/cdn/primeng/images/card-ng.jpg', alt: 'Image 3' }
-    // ];
-
-    // this.responsiveOptions = [
-    //   {
-    //     breakpoint: '1024px',
-    //     numVisible: 3,
-    //     numScroll: 3
-    //   },
-    //   {
-    //     breakpoint: '768px',
-    //     numVisible: 2,
-    //     numScroll: 2
-    //   },
-    //   {
-    //     breakpoint: '576px',
-    //     numVisible: 1,
-    //     numScroll: 1
-    //   }
-    // ];
   }
 
   selectSection(section: string) {

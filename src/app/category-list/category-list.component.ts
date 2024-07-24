@@ -50,7 +50,7 @@ export class CategoryListComponent {
     
     { id: 12, title: 'IT Project Evaluation', image: '../assets/itprojectevaluation.png', description: 'Standardizing & prioritization of IT projects on ROI.', team: 'Renuka Perera', department: 'IT/MIS', contact: undefined, url: undefined },
     { id: 13, title: 'ILER Demand Forecasting', image: '../assets/ilerdemandforecasting.png', description: 'Full visibility of Walmart replenishment including POS.', team: 'Savannah Mason', department: 'Demand Planning', contact: undefined, url: undefined },
-    { id: 14, title: 'Customer Quoting', image: '../assets/customerquoting.png', description: 'Automation of initial costing to customers.', team: 'David Learner', department: 'Sales & Marketing', contact: undefined, url:'http://10.15.1.42:3002/' },
+    { id: 14, title: 'Customer Quoting', image: '../assets/customerquoting.png', description: 'Automation of initial costing to customers.', team: 'David Learner', department: 'Sales & Marketing', contact: undefined, url:'http://10.15.1.42:3002' },
     { id: 15, title: 'Product Costing', image: '../assets/productcosting.png', description: 'Fully automated solution for pre-costing (data management).', team: 'Violet Ramiraz', department: 'Data Management', contact: undefined, url: undefined },
     { id: 16, title: 'Program Management', image: '../assets/programmanagement.png', description: 'Real-time system tracking of program management.', team: 'Violet Ramiraz', department: 'Program Management', contact: undefined, url: undefined }
 ];
